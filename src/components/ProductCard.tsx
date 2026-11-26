@@ -16,7 +16,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
           alt={product.title}
           className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
         />
-        <span className="absolute top-3 left-3 bg-emerald-700 text-white text-xs px-2.5 py-1 rounded-full font-medium">
+        <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs px-2.5 py-1 rounded-full font-medium">
           {product.category}
         </span>
       </Link>
@@ -26,7 +26,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
             <Star size={14} fill="currentColor" />
             <span className="font-bold">{product.rating || 5.0}</span>
           </div>
-          <Link to={`/produto/${product.id}`} className="font-bold text-zinc-900 hover:text-emerald-700 line-clamp-1 mb-1">
+          <Link to={`/produto/${product.id}`} className="font-bold text-zinc-900 hover:text-blue-600 line-clamp-1 mb-1">
             {product.title}
           </Link>
           <p className="text-xs text-zinc-500 line-clamp-2 mb-4">{product.description}</p>
@@ -34,13 +34,13 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
         <div className="flex items-center justify-between pt-4 border-t border-zinc-100">
           <div>
             <span className="text-xs text-zinc-400 block">Por apenas</span>
-            <span className="text-lg font-bold text-emerald-800">
+            <span className="text-lg font-bold text-blue-600">
               R$ {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
             </span>
           </div>
           <button
             onClick={() => onAddToCart(product)}
-            className="bg-zinc-900 hover:bg-emerald-700 text-white p-3 rounded-xl transition flex items-center justify-center"
+            className="bg-zinc-900 hover:bg-blue-600 text-white p-3 rounded-xl transition flex items-center justify-center"
             title="Adicionar ao carrinho"
           >
             <ShoppingBag size={18} />

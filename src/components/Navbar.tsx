@@ -29,7 +29,7 @@ export function Navbar({ cartCount, onOpenCart, onSearch }: NavbarProps) {
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <Link to="/" className="text-2xl font-bold tracking-tight text-emerald-400">
+          <Link to="/" className="text-2xl font-bold tracking-tight text-blue-500">
             Shoponline
           </Link>
         </div>
@@ -40,7 +40,7 @@ export function Navbar({ cartCount, onOpenCart, onSearch }: NavbarProps) {
             placeholder="Buscar produtos, marcas, categorias..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-zinc-800 text-white pl-4 pr-12 py-2.5 rounded-xl border border-zinc-700 focus:outline-none focus:border-emerald-500"
+            className="w-full bg-zinc-800 text-white pl-4 pr-12 py-2.5 rounded-xl border border-zinc-700 focus:outline-none focus:border-blue-500"
           />
           <button type="submit" className="absolute right-3 top-3 text-zinc-400 hover:text-white">
             <Search size={20} />
@@ -50,7 +50,7 @@ export function Navbar({ cartCount, onOpenCart, onSearch }: NavbarProps) {
         <div className="flex items-center gap-4">
           <button
             onClick={onOpenCart}
-            className="relative bg-emerald-700 hover:bg-emerald-600 text-white p-3 rounded-xl flex items-center gap-2 transition"
+            className="relative bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-xl flex items-center gap-2 transition shadow-md shadow-blue-900/20"
           >
             <ShoppingBag size={20} />
             <span className="hidden sm:inline font-medium">Carrinho</span>
